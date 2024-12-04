@@ -176,14 +176,45 @@ movies = [
     ["Singing In The Rain",5]
 ]
 
-const movieTitles = movies
-  .filter(innerArray => innerArray.some(item => typeof item === "string")) 
-  .map(innerArray => innerArray.find(item => typeof item === "string"));   
+let movieList = ""
+for(let i = 0; i < movies.length; i++){
+    movieList += "\n" + movies[i].filter(item=>typeof item == "string").join("")
+}
+
+console.log(movieList)
 
 //STEP 14
+let employees = ["ZAK","JESSICA","MARK","FRED","SALLY"]
+
+console.log("Employees: \n\n")
+
+const showEmployee = (employees)=>{
+    for(let i = 0; i < employees.length; i++){
+        console.log(employees[i])
+    }
+}
+
+showEmployee(employees)
 
 //STEP 15
+let testArray = [58, '', 'abcd', true, null, false, 0]
+const filterValues = (arr) => {
+    console.log(arr.filter(item=>item))
+}
+
+filterValues(testArray)
 
 //STEP 16
+const getRandomItem = (arr)=>{
+    let index = Math.floor(Math.random() * (0,arr.length))
+    return arr[index]
+}
+
+getRandomItem([1,2,3,4,5,6,7,8,9])
 
 //STEP 17
+const getMaxElement = (arr) =>{
+    return(Math.max(...arr))
+}
+
+getMaxElement([2,35,49,24,1])
