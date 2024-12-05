@@ -157,7 +157,7 @@ console.log(movies[0])
 let leastFavIndexes = []
 
 for (let i = 0; i < movies.length; i++){
-    let index = movies[i].inArray(leastFavMovies)
+    let index = leastFavMovies.includes(movies[i])
     if(index > -1) leastFavIndexes.push(index)
 }
 
