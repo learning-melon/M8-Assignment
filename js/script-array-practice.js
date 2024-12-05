@@ -4,98 +4,122 @@ let arrMovies = [
     "The Greatest Showman",
     "Lala Land",
     "Ratatouille",
-    "Pitch Perfect"
+    "Singing In The Rain"
 ]
 
 console.log(arrMovies[1])
 
 //STEP 2
-class Movies{
-    constructor(){
-       let movies =  new Array(5)
-       for(let i = 0; i < arrMovies.length; i++){
-        movies[i] = arrMovies[i]
-       }
-       console.log(movies[0])
-    }
+let movies =  new Array(5)
+for(let i = 0; i < arrMovies.length; i++){
+    movies[i] = arrMovies[i]
 }
-
-let m = new Movies()
+console.log(movies[0])
 
 //STEP 3
-class Movies2{
-    constructor(){
-       let movies =  new Array(5)
-       for(let i = 0; i < arrMovies.length; i++){
-        movies[i] = arrMovies[i]
-       }
-       movies.splice(3,0,"The Sound of Music")
-       console.log(movies.length)
-    }
+movies =  new Array(5)
+for(let i = 0; i < arrMovies.length; i++){
+    movies[i] = arrMovies[i]
 }
+console.log(movies[0])
 
-let m2 = new Movies2()
+movies.splice(3,0,"The Sound of Music")
+console.log(movies.length)
 
 //STEP 4
-let movies = [] 
-for (let i = 0; i < arrMovies.length; i++){
+movies = [] 
+for (let i = 0; i < 5; i++){
     movies.push(arrMovies[i])
 }
 delete(movies[0])
 console.log(movies)
 
 //STEP 5
-//let movies = [] //how to declare, but commenting out due to beign declared previously
-movies = [] 
-for (let i = 0; i < arrMovies.length; i++){
-    movies.push(arrMovies[i])
-}
-movies.push("Rat Race")
-movies.push("The Classic")
+movies = [
+    "Eternal Sunshine of the Spotless Mind",
+    "The Greatest Showman",
+    "Lala Land",
+    "Ratatouille",
+    "Singing In The Rain",
+    "Rat Race",
+    "The Classic"
+] 
 
-for(let i = 0; i < movies.length; i++){
-    console.log(movies[i])
+for(index in movies){
+    console.log(movies[index])
 }
 
 //STEP 6
-//let movies = [] //how to declare, but commenting out due to beign declared previously
-movies = [] 
-for (let i = 0; i < arrMovies.length; i++){
-    movies.push(arrMovies[i])
-}
-movies.push("Rat Race")
-movies.push("The Classic")
+movies = [
+    "Eternal Sunshine of the Spotless Mind",
+    "The Greatest Showman",
+    "Lala Land",
+    "Ratatouille",
+    "Singing In The Rain",
+    "Rat Race",
+    "The Classic"
+] 
 
-for(let i in movies){
-    console.log(movies[i])
-}
-
-//STEP 7
-//let movies = [] //how to declare, but commenting out due to beign declared previously
-movies = [] 
-for (let i = 0; i < arrMovies.length; i++){
-    movies.push(arrMovies[i])
-}
-movies.push("Rat Race")
-movies.push("The Classic")
+/*for(index in movies){
+    console.log(movies[index])
+}*/
 
 for(let movie of movies){
     console.log(movie)
 }
 
+//STEP 7
+movies = [
+    "Eternal Sunshine of the Spotless Mind",
+    "The Greatest Showman",
+    "Lala Land",
+    "Ratatouille",
+    "Singing In The Rain",
+    "Rat Race",
+    "The Classic"
+] 
+
+/*for(index in movies){
+    console.log(movies[index])
+}
+
+for(let movie of movies){
+    console.log(movie)
+}*/
+
+movies.sort()
+for(let movie of movies){
+    console.log(movie)
+}
+
 //STEP 8
-//let movies = [] //how to declare, but commenting out due to beign declared previously
-movies = [] 
-let leastFavMovies = ["John Wick","Pearl Harbor","Batman Begins"]
+movies = [
+    "Eternal Sunshine of the Spotless Mind",
+    "The Greatest Showman",
+    "Lala Land",
+    "Ratatouille",
+    "Singing In The Rain",
+    "Rat Race",
+    "The Classic"
+] 
+/*
+for(index in movies){
+    console.log(movies[index])
+}
+
+for(let movie of movies){
+    console.log(movie)
+}*/
+
+movies.sort()
+/*for(let movie of movies){
+    console.log(movie)
+}*/
+
+leastFavMovies = ["John Wick","Pearl Harbor","Batman Begins"]
 let movieStr = ""
 
-for (let i = 0; i < arrMovies.length; i++){
-    movies.push(arrMovies[i])
-}
-movies.push("Rat Race")
-movies.push("The Classic")
-
-movieStr += "Movies I Like: \n\n"
+movieStr += "Movies I like: \n\n"
 for(let i = 0; i < movies.length; i++){
     movieStr += movies[i]+"\n"
 }
@@ -107,61 +131,132 @@ for(let i = 0; i < leastFavMovies.length; i++){
 console.log(movieStr)
 
 //STEP 9
-//let movies = [] //how to declare, but commenting out due to beign declared previously
-movies = [] 
+movies = [
+    "Eternal Sunshine of the Spotless Mind",
+    "The Greatest Showman",
+    "Lala Land",
+    "Ratatouille",
+    "Singing In The Rain",
+    "Rat Race",
+    "The Classic"
+] 
+/*
+for(index in movies){
+    console.log(movies[index])
+}
+
+for(let movie of movies){
+    console.log(movie)
+}*/
+
+movies.sort()
+
+/*for(let movie of movies){
+    console.log(movie)
+}*/
+
 leastFavMovies = ["John Wick","Pearl Harbor","Batman Begins"]
+
+movies = movies.concat(leastFavMovies)
+movies = movies.reverse()
 movieStr = ""
 
-for (let i = 0; i < arrMovies.length; i++){
-    movies.push(arrMovies[i])
+movieStr += "Movies: \n\n"
+for(let i = 0; i < movies.length; i++){
+    movieStr += movies[i]+"\n"
 }
-movies.push("Rat Race")
-movies.push("The Classic")
 
-movies.concat(leastFavMovies)
-console.log(movies.reverse())
+console.log(movieStr)
 
 //STEP 10
-//let movies = [] //how to declare, but commenting out due to beign declared previously
-movies = [] 
+movies = [
+    "Eternal Sunshine of the Spotless Mind",
+    "The Greatest Showman",
+    "Lala Land",
+    "Ratatouille",
+    "Singing In The Rain",
+    "Rat Race",
+    "The Classic"
+] 
+/*
+for(index in movies){
+    console.log(movies[index])
+}
+
+for(let movie of movies){
+    console.log(movie)
+}*/
+
+movies.sort()
+
+/*for(let movie of movies){
+    console.log(movie)
+}*/
+
 leastFavMovies = ["John Wick","Pearl Harbor","Batman Begins"]
+
+movies = movies.concat(leastFavMovies)
+movies = movies.reverse()
 movieStr = ""
 
-for (let i = 0; i < arrMovies.length; i++){
-    movies.push(arrMovies[i])
+movieStr += "Movies: \n\n"
+for(let i = 0; i < movies.length; i++){
+    movieStr += movies[i]+"\n"
 }
-movies.push("Rat Race")
-movies.push("The Classic")
 
-movies.concat(leastFavMovies)
-let reverseMovies = movies.reverse()
-console.log(reverseMovies[reverseMovies.length-1])
+//console.log(movieStr)
+
+console.log(movies[movies.length-1])
 
 //STEP 11
-//let movies = [] //how to declare, but commenting out due to beign declared previously
-movies = [] 
+movies = [
+    "Eternal Sunshine of the Spotless Mind",
+    "The Greatest Showman",
+    "Lala Land",
+    "Ratatouille",
+    "Singing In The Rain",
+    "Rat Race",
+    "The Classic"
+] 
+/*
+for(index in movies){
+    console.log(movies[index])
+}
+
+for(let movie of movies){
+    console.log(movie)
+}*/
+
+movies.sort()
+
+/*for(let movie of movies){
+    console.log(movie)
+}*/
+
 leastFavMovies = ["John Wick","Pearl Harbor","Batman Begins"]
+
+movies = movies.concat(leastFavMovies)
+movies = movies.reverse()
 movieStr = ""
 
-for (let i = 0; i < arrMovies.length; i++){
-    movies.push(arrMovies[i])
+movieStr += "Movies: \n\n"
+for(let i = 0; i < movies.length; i++){
+    movieStr += movies[i]+"\n"
 }
-movies.push("Rat Race")
-movies.push("The Classic")
 
-movies.concat(leastFavMovies)
-movies = movies.reverse()
+//console.log(movieStr)
+//console.log(movies[movies.length-1])
 console.log(movies[0])
 
 //STEP 12
 let leastFavIndexes = []
 
 for (let i = 0; i < movies.length; i++){
-    let index = leastFavMovies.includes(movies[i])
+    let index = leastFavMovies.indexOf(movies[i])
     if(index > -1) leastFavIndexes.push(index)
 }
 
-let moreFavMovies = ["Anchorman","Singing In The Rain","The Proposal"]
+let moreFavMovies = ["Anchorman","Wallace and Gromit: A Grand Day Out","The Proposal"]
 
 for(let i = 0; i < leastFavIndexes.length; i++){
     movies[leastFavIndexes[i]] = moreFavMovies[i]

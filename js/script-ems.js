@@ -1,5 +1,5 @@
 // CREATE AN ARRAY OF EMPLOYEES
-let employees = [
+employees = [
     {id:1, name:'Adam Smith',extension:111,email:'asmith@company.com',department:'Quality Assurance'},
     {id:2, name:'Bob Brown',extension:112,email:'bbrown@company.com',department:'Sales'},
     {id:3, name:'Charlotte Webb',extension:113,email:'cwebb@company.com',department:'Executive'},
